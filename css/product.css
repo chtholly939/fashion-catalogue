@@ -1,0 +1,138 @@
+/* ===============================
+   Product Details Page CSS
+   =============================== */
+
+.product-page {
+  padding-top: 110px;
+  padding-bottom: 70px;
+}
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.product-gallery {
+  background: var(--card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  /* overflow: hidden; */
+  box-shadow: var(--shadow);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 18px;
+}
+
+.product-gallery img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  background: var(--card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  box-shadow: var(--shadow);
+}
+
+.product-info h1 {
+  font-family: var(--font-title);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+}
+
+.product-info p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.product-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.pill {
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.pill.gold {
+  border-color: var(--gold-outline);
+  color: var(--gold);
+  background: rgba(214,179,90,0.06);
+}
+
+.product-table {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255,255,255,0.03);
+}
+
+.row span {
+  color: var(--muted);
+}
+
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.note-box {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 14px;
+  text-decoration: none;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.back-link:hover {
+  color: var(--gold-hover);
+}
+
+@media (max-width: 980px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-gallery img {
+    height: 380px;
+  }
+}

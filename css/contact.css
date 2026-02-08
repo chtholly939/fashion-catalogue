@@ -1,0 +1,121 @@
+/* ===============================
+   Contact Page CSS
+   =============================== */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding-bottom: 70px;
+}
+
+/* Left Info */
+.contact-info {
+  background: var(--card);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  box-shadow: var(--shadow);
+}
+
+.contact-info h2 {
+  font-family: var(--font-title);
+  margin-bottom: 8px;
+}
+
+.contact-info p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.info-card {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  background: rgba(255,255,255,0.03);
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-card span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Right Form */
+.contact-form-card {
+  background: var(--card);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form-card h2 {
+  font-family: var(--font-title);
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  outline: none;
+  font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted-2);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group option{
+  color: var(--gold);
+}
+
+/* Note box */
+.note-box {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form-card{
+    order: 1;
+  }
+
+  .contact-info {
+    order: 2;
+  }
+}

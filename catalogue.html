@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELVÉRA | Catalogue</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ==================== NAVBAR =================== -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        VELV<span>É</span>RA
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogue.html" class="active">Catalogue</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="catalogue.html">
+          <button class="btn-outline">Explore</button>
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============= PAGE HEADER ============== -->
+  <section class="page-head container">
+    <h1 class="page-title">Luxury Catalogue</h1>
+    <p class="page-subtitle">
+      Explore premium collections crafted for elegance.
+      This is a <b> catalogue showcase</b>.
+    </p>
+
+    <div class="controls-bar">
+      <div class="search-box">
+        <span><i class="fa-solid fa-magnifying-glass" style="color: #d6b35a;"></i></span>
+        <input type="text" id="searchInput"
+        placeholder="Search by name , fabric, style..."/>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="women">women</button>
+        <button class="filter-btn" data-filter="men">Men</button>
+        <button class="filter-btn" data-filter="ethnic">Ethenic</button>
+        <button class="filter-btn" data-filter="western">Western</button>
+        <button class="filter-btn" data-filter="formal">Formal</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= CATALOGUE GRID =============== -->
+  <section class="container" style="padding-bottom: 70px;">
+    <div class="catalogue-grid" id="catalogueGrid">
+
+      <!-- PRODUCT - 1 -->
+      <article class="card product-card"
+        data-category="women ethnic"
+        data-title="Royal Velvet Saree"
+        data-fabric="velvet"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img1.jpg"
+            alt="Royal Velvet Saree"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Women • Ethnic</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Royal Velvet Saree</h3>
+          <p>Premium velvet finish with a gold signature border for luxury occasions.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Velvet</span>
+            <span class="dot">•</span>
+            <span>Sizes: Custom</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product1.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="card product-card"
+        data-category="men formal"
+        data-title="Midnight Tuxedo Set"
+        data-fabric="wool"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img2.jpg"
+            alt="Midnight Tuxedo Set"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Men • Formal</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Midnight Tuxedo Set</h3>
+          <p>Sharp tailoring with premium texture — made to look like power.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Wool Blend</span>
+            <span class="dot">•</span>
+            <span>Fit: Slim</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product2.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="card product-card"
+        data-category="women western"
+        data-title="Gold Satin Dress"
+        data-fabric="satin"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img3.jpg"
+            alt="Gold Satin Dress"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Women • Western</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Gold Satin Dress</h3>
+          <p>Minimal luxury with a satin glow — designed for premium evenings.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Satin</span>
+            <span class="dot">•</span>
+            <span>Sizes: S - XL</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product3.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="card product-card"
+        data-category="men western"
+        data-title="Urban Luxe Jacket"
+        data-fabric="leather"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img4.jpg"
+            alt="Urban Luxe Jacket"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Men • Western</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Urban Luxe Jacket</h3>
+          <p>Streetwear-inspired luxury jacket with premium leather texture.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Leather</span>
+            <span class="dot">•</span>
+            <span>Sizes: M - XXL</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product4.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="card product-card"
+        data-category="women formal"
+        data-title="Pearl Signature Gown"
+        data-fabric="silk"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img5.jpg"
+            alt="Pearl Signature Gown"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Women • Formal</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Pearl Signature Gown</h3>
+          <p>Luxury silk blend gown with a premium studio finish and soft drape.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Silk Blend</span>
+            <span class="dot">•</span>
+            <span>Sizes: Custom</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product5.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="card product-card"
+        data-category="ethnic men"
+        data-title="Heritage Kurta Set"
+        data-fabric="cotton"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img6.jpg"
+            alt="Heritage Kurta Set"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Men • Ethnic</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Heritage Kurta Set</h3>
+          <p>Classic ethnic wear designed with modern cutting and premium finish.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Cotton</span>
+            <span class="dot">•</span>
+            <span>Fit: Regular</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product6.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 7 -->
+      <article class="card product-card"
+        data-category="women ethnic"
+        data-title="Golden Heritage Lehenga"
+        data-fabric="silk"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img7.jpg"
+            alt="Golden Heritage Lehenga"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Women • Ethnic</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Golden Heritage Lehenga</h3>
+          <p>Royal silk lehenga with elegant traditional finishing for luxury events.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Silk</span>
+            <span class="dot">•</span>
+            <span>Sizes: Custom</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product7.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 8 -->
+      <article class="card product-card"
+        data-category="men formal"
+        data-title="Signature Black Blazer"
+        data-fabric="wool"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img8.jpg"
+            alt="Signature Black Blazer"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Men • Formal</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Signature Black Blazer</h3>
+          <p>Minimal luxury blazer with sharp tailoring and premium button finish.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Wool Blend</span>
+            <span class="dot">•</span>
+            <span>Fit: Slim</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product8.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 9 -->
+      <article class="card product-card"
+        data-category="women formal"
+        data-title="Velvet Night Gown"
+        data-fabric="velvet"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img9.jpg"
+            alt="Velvet Night Gown"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Women • Formal</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Velvet Night Gown</h3>
+          <p>Luxury velvet gown made for premium nights and statement entrances.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Velvet</span>
+            <span class="dot">•</span>
+            <span>Sizes: S - XL</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product9.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 10 -->
+      <article class="card product-card"
+        data-category="men western"
+        data-title="Luxe Streetwear Co-ord Set"
+        data-fabric="cotton"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img10.jpg"
+            alt="Luxe Streetwear Co-ord Set"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Men • Western</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Luxe Streetwear Co-ord Set</h3>
+          <p>Luxury streetwear co-ord with premium stitching and bold silhouette.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Cotton</span>
+            <span class="dot">•</span>
+            <span>Sizes: M - XXL</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product10.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 11 -->
+      <article class="card product-card"
+        data-category="women western"
+        data-title="Champagne Luxe Top"
+        data-fabric="satin"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img11.jpg"
+            alt="Champagne Luxe Top"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Women • Western</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Champagne Luxe Top</h3>
+          <p>Premium satin top with soft shine — perfect for luxury casual styling.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Satin</span>
+            <span class="dot">•</span>
+            <span>Sizes: XS - L</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product11.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 12 -->
+      <article class="card product-card"
+        data-category="ethnic men"
+        data-title="Royal Embroidered Sherwani"
+        data-fabric="silk"
+      >
+        <div class="product-img-wrap">
+          <img
+            src="images/img12.jpg"
+            alt="Royal Embroidered Sherwani"
+            class="product-img"
+            loading="lazy"
+          />
+          <span class="tag">Men • Ethnic</span>
+          <div class="img-overlay"></div>
+        </div>
+
+        <div class="card-body">
+          <h3>Royal Embroidered Sherwani</h3>
+          <p>Classic sherwani with royal embroidery finish and luxury fabric flow.</p>
+
+          <div class="product-meta">
+            <span>Fabric: Silk</span>
+            <span class="dot">•</span>
+            <span>Sizes: Custom</span>
+          </div>
+
+          <div class="product-actions">
+            <a class="btn-mini" href="details/product12.html">View Details</a>
+            <a class="btn-mini gold" href="contact.html">Request Design</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="empty-state" id="emptyState">
+      <h3 class="empty-title">No items found</h3>
+      <p>Try a different search keyword or select another category filter.</p>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-logo">VELV<span>É</span>RA</h3>
+        <p class="muted">
+          Luxury fashion catalogue + order progress system.<br />
+          Built for premium brands. Not an e-commerce site.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Email: support@velvera.com</li>
+          <li>Instagram: @velvera.studio</li>
+          <li>Location: India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p><i class="fa-regular fa-copyright" style="color: #d6b35a;"></i> 2026 VELVÉRA  • Crafted with elegance </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/catalogue.js"></script>
+</body>
+</html>
