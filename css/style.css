@@ -47,11 +47,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 body {
   background: radial-gradient(circle at top, var(--bg-2), var(--bg));
   color: var(--text);
@@ -76,23 +71,6 @@ body.fade-out {
 
 h1.page-title{
   color: var(--gold);
-}
-
-a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-a:visited {
-  color: var(--gold);
-}
-
-a:hover {
-  color: var(--gold-hover);
-}
-
-a:active {
-  color: var(--gold-hover);
 }
 
 .container {
@@ -147,7 +125,7 @@ a:active {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
   background: var(--overlay-dark);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--divider);
@@ -155,13 +133,9 @@ a:active {
 
 .navbar {
   height: 72px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 14px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 
 .header,
@@ -172,18 +146,11 @@ a:active {
 
 .logo {
   font-family: var(--font-title);
-  font-size: 1.4rem;
-  letter-spacing: 2px;
   color: var(--text);
-
-  display: flex;
-  align-items: center;
-
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-
-  transform: translateY(1px);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
 }
 
 .logo span {
@@ -987,37 +954,33 @@ footer h4 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .nav-links {
     position: absolute;
     top: 72px;
     left: 0;
     width: 100%;
-
     background: var(--overlay-mobile);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--divider);
 
     flex-direction: column;
     align-items: flex-start;
+    gap: 0;
 
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-
-    transition: opacity var(--t-mid), transform var(--t-mid);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height var(--t-mid);
   }
 
-  .nav-links.open {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+  .nav-links.show {
+    max-height: 350px;
   }
 
   .nav-links li {
     width: 100%;
   }
-
+  
   .nav-links li a {
     display: block;
     width: 100%;
@@ -1025,6 +988,12 @@ footer h4 {
   }
 
   .hamburger {
-    display: inline-flex;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-actions .btn-outline {
+    display: none;
   }
 }
