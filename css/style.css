@@ -47,6 +47,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  width: 100%;
+  overfloe-x: hidden;
+}
+
 body {
   background: radial-gradient(circle at top, var(--bg-2), var(--bg));
   color: var(--text);
@@ -71,6 +76,23 @@ body.fade-out {
 
 h1.page-title{
   color: var(--gold);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--gold);
+}
+
+a:hover {
+  color: var(--gold-hover);
+}
+
+a:active {
+  color: var(--gold-hover);
 }
 
 .container {
@@ -125,7 +147,7 @@ h1.page-title{
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
   background: var(--overlay-dark);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--divider);
@@ -133,9 +155,13 @@ h1.page-title{
 
 .navbar {
   height: 72px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .header,
@@ -146,11 +172,18 @@ h1.page-title{
 
 .logo {
   font-family: var(--font-title);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 700;
+  font-size: 1.4rem;
   letter-spacing: 2px;
-  font-size: 1.2rem;
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+
+  transform: translateY(1px);
 }
 
 .logo span {
@@ -995,5 +1028,19 @@ footer h4 {
 @media (max-width: 768px) {
   .nav-actions .btn-outline {
     display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 769px) {
+  .hamburger {
+    display: inline-flex;
   }
 }
