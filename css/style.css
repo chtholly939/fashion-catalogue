@@ -118,6 +118,23 @@ h1.page-title{
 .footer h4 {
   color: var(--gold);
 }
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--gold);
+}
+
+a:hover {
+  color: var(--gold-hover);
+}
+
+a:active {
+  color: var(--gold-hover);
+}
 /* =====================================================
 ======================= Navbar =========================
 ======================================================== */
