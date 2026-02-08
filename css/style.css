@@ -197,11 +197,7 @@ h1.page-title{
 }
 
 .hamburger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height:1;
-  
+  display: block;
   background: transparent;
   border: 1px solid rgba(255,255,255,0.14);
   color: var(--text);
@@ -210,11 +206,6 @@ h1.page-title{
   border-radius: 12px;
   cursor: pointer;
   transition: var(--t-fast);
-}
-
-.hamburger i {
-  display: block;
-  line-height: 1;
 }
 
 .hamburger:hover {
@@ -1000,8 +991,4 @@ footer h4 {
   .hamburger {
     display: block;
   }
-
-  .nav-actions {
-    display: flex;
-    align-items: center;
 }
