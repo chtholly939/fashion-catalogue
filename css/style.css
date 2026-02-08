@@ -119,22 +119,7 @@ h1.page-title{
   color: var(--gold);
 }
 
-a {
-  color: var(--gold);
-  text-decoration: none;
-}
 
-a:visited {
-  color: var(--gold);
-}
-
-a:hover {
-  color: var(--gold-hover);
-}
-
-a:active {
-  color: var(--gold-hover);
-}
 /* =====================================================
 ======================= Navbar =========================
 ======================================================== */
@@ -212,7 +197,11 @@ a:active {
 }
 
 .hamburger {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height:1;
+  
   background: transparent;
   border: 1px solid rgba(255,255,255,0.14);
   color: var(--text);
@@ -221,6 +210,11 @@ a:active {
   border-radius: 12px;
   cursor: pointer;
   transition: var(--t-fast);
+}
+
+.hamburger i {
+  display: block;
+  line-height: 1;
 }
 
 .hamburger:hover {
@@ -496,6 +490,15 @@ a:active {
   color: var(--muted);
   font-size: 0.95rem;
   margin-bottom: 14px;
+}
+
+.card-link,
+.card-link:visited {
+  color: var(--gold);
+}
+
+.card-link:hover {
+  color: var(--gold-hover);
 }
 
 /* Responsive */
@@ -997,4 +1000,8 @@ footer h4 {
   .hamburger {
     display: block;
   }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
 }
