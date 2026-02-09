@@ -118,8 +118,6 @@ h1.page-title{
 .footer h4 {
   color: var(--gold);
 }
-
-
 /* =====================================================
 ======================= Navbar =========================
 ======================================================== */
@@ -197,7 +195,7 @@ h1.page-title{
 }
 
 .hamburger {
-  display: block;
+  display: none;
   background: transparent;
   border: 1px solid rgba(255,255,255,0.14);
   color: var(--text);
@@ -483,7 +481,7 @@ h1.page-title{
   margin-bottom: 14px;
 }
 
-.card-link,
+card-link,
 .card-link:visited {
   color: var(--gold);
 }
@@ -929,33 +927,58 @@ footer h4 {
   margin-bottom: 8px;
 }
 
+/* ===============================
+   RESPONSIVE FIX (CLEAN VERSION)
+   =============================== */
+
+/* Tablet & below */
 @media (max-width: 900px) {
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline {
-    grid-template-columns: 1fr;
-  }
-
-  .track-box {
-    grid-template-columns: 1fr;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-stats {
-    grid-template-columns: 1fr;
-  }
-
+  .grid-3,
+  .timeline,
+  .track-box,
+  .about-grid,
+  .hero-stats,
   .catalogue-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
+/* ===============================
+   MOBILE NAVBAR (MAIN FIX)
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Navbar container */
+  .navbar {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo fix */
+  .logo {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  /* Hamburger fix */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    line-height: 1;
+  }
+
+  .hamburger i {
+    display: block;
+    line-height: 1;
+  }
+
+  /* Hide desktop nav */
   .nav-links {
     position: absolute;
     top: 72px;
@@ -965,30 +988,32 @@ footer h4 {
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--divider);
 
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0;
 
-    overflow: hidden;
     max-height: 0;
-    transition: max-height var(--t-mid);
+    overflow: hidden;
+    transition: max-height 0.35s ease;
   }
 
+  /* When menu opens */
   .nav-links.show {
-    max-height: 350px;
+    max-height: 360px;
   }
 
   .nav-links li {
     width: 100%;
   }
-  
+
   .nav-links li a {
     display: block;
     width: 100%;
     padding: 14px 18px;
   }
 
-  .hamburger {
-    display: block;
+  /* Hide desktop buttons */
+  .nav-actions .btn-outline {
+    display: none;
   }
 }
